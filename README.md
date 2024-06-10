@@ -3,7 +3,7 @@
 ## Overview
 
 ACGRIME is an enhanced version of the RIME optimization algorithm. It integrates chaos theory, adaptive chaotic weighting, and Gaussian mutation to address the limitations of the original RIME algorithm, including issues with population diversity and local optima. ACGRIME demonstrates superior performance in global optimization and feature selection tasks.
-
+Dataset link: https://archive.ics.uci.edu/datasets
 
 ## Performance
 
@@ -13,7 +13,6 @@ Extensive comparative experiments have shown that ACGRIME outperforms the origin
 
 - **Global Optimization:** ACGRIME achieved better convergence speed and stability across various benchmark functions.
 - **Feature Selection:** The binary form of ACGRIME (bACGRIME) demonstrated superior classification accuracy with fewer features on 22 UCI datasets compared to six well-known algorithms.
-- **Dataset link:** https://archive.ics.uci.edu/datasets
 
 
 1. Clone the repository:
