@@ -29,7 +29,7 @@ function [Best_rime, Convergence_curve] = ACGRIME_v1(N, MaxFEs, lb, ub, dim, fob
         E = sqrt(ChaosValue * FEs/MaxFEs);
         newRimepop = Rimepop;
         normalized_rime_rates = normr(Rime_rates);
-        w1 = (1-FEs/MaxFEs)^(1-tan(pi*(ChaosValue * rand-0.5))*FEs/MaxFEs); % Adaptive chaotic weight
+        w1 = (1-FEs/MaxFEs)^(1-tan(pi*(ChaosValue * rand-0.5))*FEs/MaxFEs); % Adaptive weighting
  
         for i = 1:N
             for j = 1:dim
