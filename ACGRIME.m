@@ -37,18 +37,17 @@ function [Best_rime, Convergence_curve] = ACGRIME_v1(N, MaxFEs, lb, ub, dim, fob
                 r2 = rand();
                 c1 = 2*exp(-(4*FEs/MaxFEs)^2);
                 c2 = rand();
-                c3 = rand();
  
-                if r1 < E
-                    if c3 < 0.5
-                        newRimepop(i, j) = Best_rime(1, j) + w1 * c1 * ((Ub(j) - Lb(j)) * c2 + Lb(j));
+                if r2 < E
+                    if c2 < 0.5
+                        newRimepop(i, j) = Best_rime(1, j) + w1 * c1 * ((Ub(j) - Lb(j)) * r1 + Lb(j));
                     else
-                        newRimepop(i, j) = Best_rime(1, j) - w1 * c1 * ((Ub(j) - Lb(j)) * c2 + Lb(j));
+                        newRimepop(i, j) = Best_rime(1, j) - w1 * c1 * ((Ub(j) - Lb(j)) * r1 + Lb(j));
                     end
                 end
 
  
-                if r2 < normalized_rime_rates(i)
+                if r3 < normalized_rime_rates(i)
                     newRimepop(i, j) = Best_rime(1, j);
                 end
             end
