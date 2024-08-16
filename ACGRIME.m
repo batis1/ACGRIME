@@ -35,6 +35,7 @@ function [Best_rime, Convergence_curve] = ACGRIME_v1(N, MaxFEs, lb, ub, dim, fob
             for j = 1:dim
                 r1 = rand();
                 r2 = rand();
+                r3 = rand();
                 c1 = 2*exp(-(4*FEs/MaxFEs)^2);
                 c2 = rand();
  
